@@ -7,11 +7,18 @@ SCRIPT_DIR = build
 build: info
 	@bash $(SCRIPT_DIR)/build.sh
 
+# Project info
 info:
 	echo $("make file for build project")
 
+# For run scrip
 run:
+	echo "\n\n Run $(SCRIPT_DIR)/run.sh:"
 	@bash $(SCRIPT_DIR)/run.sh
 
+# For build and run script
+br: build run
+
+# For test unit test, function test, system test
 test: info
 	echo "For test project unit test, function test, system test"

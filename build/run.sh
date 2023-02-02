@@ -22,6 +22,9 @@ function f_run_main.jar() {
     java -jar $SCRIPT_DIR/main.jar
 }
 
+
+
+
 ###################################################################
 #Main function
 #
