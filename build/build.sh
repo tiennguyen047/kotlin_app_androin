@@ -20,7 +20,7 @@ function f_printUsage() {
 function f_build_main() {
     echo "Start build main.jar"
     printf "Run command line build kotlin => main.jar \n"
-    kotlinc $PROJECT_REPO/project/src/main.kt -include-runtime -d $SCRIPT_DIR/main.jar
+    kotlinc $PROJECT_REPO/project/src/kotlin/main.kt -include-runtime -d $SCRIPT_DIR/main.jar
     echo "Build sucessfully $SCRIPT_DIR/main.jar"
 }
 
