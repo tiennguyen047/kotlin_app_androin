@@ -19,6 +19,11 @@ run:
 # For build and run script
 br: build run
 
+# For run python code
+python:
+	echo "Run $(SCRIPT_DIR)/run_py.sh"
+	@bash $(SCRIPT_DIR)/run_py.sh
+
 # For test unit test, function test, system test
 test: info
 	echo "For test project unit test, function test, system test"
