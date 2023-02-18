@@ -1,10 +1,11 @@
 #!/bin/bash
 
+source "$(realpath $(dirname $0))"/common.sh
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 PROJECT_REPO="$(git rev-parse --show-toplevel)"
 
 function f_print_Params() {
-    
+
     echo "path of run.bash is:      ${SCRIPT_DIR}"
     echo "git dir:                  ${PROJECT_REPO}"
     # echo "NQT"
@@ -17,9 +18,9 @@ function f_printUsage() {
 }
 
 function f_run_main.jar() {
-    echo "run script $SCRIPT_DIR/main.jar"
-    printf "result $SCRIPT_DIR/main.jar: \n"
-    java -jar $SCRIPT_DIR/main.jar
+    echo "run script ${packages}/main.jar"
+    printf "result ${packages}/main.jar: \n"
+    java -jar ${packages}/main.jar
 }
 
 
