@@ -30,7 +30,7 @@ function f_build_docker_images() {
     echo ${proj_repo}
     echo ${image_name}:${version}
 
-    docker build -t ${image_name}:${version} ${proj_repo}
+    docker build --no-cache -t ${image_name}:${version} ${proj_repo}
 }
 
 ###################################################################

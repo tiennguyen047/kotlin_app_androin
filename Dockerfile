@@ -12,6 +12,8 @@ RUN apt-get update && \
 
 RUN apt-get install -y python3.11
 
+RUN apt-get update && apt-get install -y iputils-ping
+
 WORKDIR /usr/local/share
 
 EXPOSE 80 443
