@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import json
 import os
 import sys
@@ -21,7 +22,14 @@ class MainHandler(NCDHTTPRequestHandler):
         """
         logger.info("NCD adapter - GET request: {}".format(self.path))
         try:
-            pass
+            if self.path == '/':
+                self._send_HTTP_response(HTTPStatus.OK,
+                                         )
+            
         except Exception:
             logger.exception("NCD adapter - GET request Exception when request handler")
             self.__send_response(HTTPStatus.INTERNAL_SERVER_ERROR)
+            
+            
+    def http_logging(self):
+        pass
